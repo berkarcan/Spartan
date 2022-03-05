@@ -11,5 +11,12 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+    @FindBy(id = "name")
+    public WebElement nameBox;
 
+    @FindBy(id = "phone")
+    public WebElement phoneBox;
+
+    @FindBy(id="genderSelect")
+    public WebElement genderDropdown;
 }
