@@ -3,7 +3,11 @@
 ##If you have have the clone of the database in a machine. You need to create configuration.properties file under project folder with the follwing information.
 
 browser=
+
 url=
+
 dbUrl=
+
 dbUsername=
+
 dbPassword=
