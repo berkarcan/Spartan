@@ -33,7 +33,7 @@ public class AddNewSpartanPage extends BasePage{
     public Map<String,String> fillForm(){
         Faker faker=new Faker();
         //String expectedName=faker.name().firstName();
-        String expectedNumber=faker.phoneNumber().subscriberNumber(10);
+        String expectedNumber= "3"+faker.phoneNumber().subscriberNumber(10);
         String expectedGender=new Random().nextInt(2)==1? "Female":"Male";
         String expectedName=Name(expectedGender);
         BrowserUtils.waitFor(0.5);
@@ -42,6 +42,8 @@ public class AddNewSpartanPage extends BasePage{
         BrowserUtils.waitForVisibility(genderDropdown,10);
 
         nameBox.sendKeys(expectedName);
+        phoneBox.clear();
+        BrowserUtils.waitFor(0.5);
         phoneBox.sendKeys(expectedNumber);
         Select select=new Select(genderDropdown);
         select.selectByVisibleText(expectedGender);
@@ -59,6 +61,7 @@ public class AddNewSpartanPage extends BasePage{
         BrowserUtils.waitForVisibility(genderDropdown,10);
 
         nameBox.sendKeys(expectedName);
+        phoneBox.clear();
         phoneBox.sendKeys(expectedNumber);
         Select select=new Select(genderDropdown);
         select.selectByVisibleText(expectedGender);
@@ -80,5 +83,7 @@ public class AddNewSpartanPage extends BasePage{
         }
         return list;
     }
+
+
 
 }

@@ -17,11 +17,11 @@ Feature:Add,Insert and Delete Spartan funtionalities
     And fills the form with "Beth" name,"Female" gender and "9513786420" phone
     Then the information should be same with database
 
-  @add
+  @addn
   Scenario: Add n Spartan randomly and verify in the Database(DB)
     When user click on add spartan
-    And fills the form with name,gender and phone number 5 times
-    Then the information for 5 spartan should be same with database
+    And fills the form with name,gender and phone number 35 times
+    Then the information for 35 spartan should be same with database
 
   @edit
   Scenario: Select one Spartan randomly, edit and verify in the Database(DB)
@@ -47,10 +47,10 @@ Feature:Add,Insert and Delete Spartan funtionalities
       | 10 |
       | 87 |
       | 50  |
-   @d
+   @del @deln
   Scenario: Select many Spartan wrt ID, delete and verify NOT in the Database(DB)
-    When user click on to delete the spartan the spartan with ID from 102 to 124
-    Then the information of the deleted spartans with ID from 102 to 124 should not be in  database
+    When user click on to delete the spartan the spartan with ID from 220 to 250
+    Then the information of the deleted spartans with ID from 220 to 250 should not be in  database
 
   @num
   Scenario:    Verify the total number at UI and DB are equal(DB)
