@@ -3,7 +3,7 @@
 
 #### For example, you can add 300 spartans or delete all the spartans from one id to another and then check these operations' success in the database. Please be careful to edit an existing spartan, otherwise manual editing step fails. As this step requires manual insertion of id you should be attentive about this.
 
-#### The github version does not contain configuration.properties file as as the database is private. 
+#### The github version does not contain configuration.properties file as the database is private. 
 #### If you have have the clone of the database in a machine. You need to create configuration.properties file under project folder with the following information.
 
 ###### browser=
