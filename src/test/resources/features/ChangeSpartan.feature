@@ -39,9 +39,9 @@ Feature:Add,Insert and Delete Spartan funtionalities
     Then the information of the deleted spartan should not be in database
 
   @del
-  Scenario Outline: Select Spartan wrt ID, delete and verify NOT in the Database(DB) id:"<id>"
-    When user click on to delete the spartan the spartan with ID: "<id>"
-    Then the information of the spartan with ID: "<id>" should not be in  database
+  Scenario Outline: Select Spartan wrt ID, delete and verify NOT in the Database(DB) id:<id>
+    When user click on to delete the spartan the spartan with ID: <id>
+    Then the information of the spartan with ID: <id> should not be in  database
     Examples:
       | id  |
       | 10 |

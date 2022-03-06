@@ -164,17 +164,16 @@ public class changeSpartanStepdef {
         }
     }
 
-    List<Object> id_list = new ArrayList<>();
+    List<String> id_list = new ArrayList<>();
 
-    @When("user click on to delete the spartan the spartan with ID: {string}")
-    public void userClickOnToDeleteTheSpartanTheSpartanWithID(String id) {
+    @When("user click on to delete the spartan the spartan with ID: {int}")
+    public void userClickOnToDeleteTheSpartanTheSpartanWithID(int ID) {
         String query = "select spartan_id,name,gender,phone from spartans";
         List<Map<String, Object>> queryResultMap = DBUtils.getQueryResultMap(query);
-        Object ID=id;
         for (Map<String, Object> map : queryResultMap) {
-            id_list.add((map.get("SPARTAN_ID")));
+            id_list.add((String) map.get("SPARTAN_ID"));
         }
-        if (!id_list.contains(ID)) {
+        if (!id_list.contains(String.valueOf(ID))) {
             System.out.println("ID IS ALREADY NOT AVAILABLE!...");
         } else {
             BrowserUtils.waitForVisibility(Driver.get().findElement(By.id("delete_spartan_" + ID)), 10);
@@ -184,12 +183,12 @@ public class changeSpartanStepdef {
     }
 
     @Then("the information of the spartan with ID: {string} should not be in  database")
-    public void theInformationOfTheSpartanWithIDShouldNotBeInDatabase(String ID) {
+    public void theInformationOfTheSpartanWithIDShouldNotBeInDatabase(int ID) {
         BrowserUtils.waitFor(0.5);
         String query = "select spartan_id,name,gender,phone from spartans";
         List<Map<String, Object>> queryResultMap = DBUtils.getQueryResultMap(query);
         for (Map<String, Object> actualmap : queryResultMap) {
-            Assert.assertNotEquals(ID, actualmap.get("SPARTAN_ID"));
+            Assert.assertNotEquals(String.valueOf(ID), (String) actualmap.get("SPARTAN_ID"));
         }
     }
 
@@ -199,17 +198,16 @@ public class changeSpartanStepdef {
         BrowserUtils.waitFor(0.5);
         String query = "select spartan_id,name,gender,phone from spartans";
         List<Map<String, Object>> queryResultMap = DBUtils.getQueryResultMap(query);
-        List<Object> id_list = new ArrayList<>();
+        List<String> id_list = new ArrayList<>();
 
         for (Map<String, Object> map : queryResultMap) {
-            id_list.add( map.get("SPARTAN_ID"));
+            id_list.add((String) map.get("SPARTAN_ID"));
         }
         System.out.println("id_list = " + id_list);
         for (int i = id1; i <= idlast; i++){
 
             Object ID=i;
-            if (!id_list.contains(ID)) {
-                System.out.println("ID = " + ID);
+            if (!id_list.contains(String.valueOf(ID))) {
                 System.out.println("ID IS ALREADY NOT AVAILABLE!...");
             } else {
                 BrowserUtils.waitForVisibility(Driver.get().findElement(By.id("delete_spartan_" + i)), 10);
