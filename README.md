@@ -1,5 +1,5 @@
 ### Spartan Database Testing
-#### This project makes backend database testing for add, edit and delete operations. Autmatical addition an deletion of multiple spartans is possible. 
+#### This project makes backend database testing for add, edit and delete operations. Automatic addition and deletion of multiple spartans is possible. 
 
 #### For example, you can add 300 spartans or delete all the spartans from one id to another and than check these operations' success in the database. Please be careful to edit an existing spartan, otherwise manual editing step fails. As this step requires manual insertion of id you should be attentive about this.
 
