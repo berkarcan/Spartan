@@ -30,8 +30,8 @@ Feature:Add,Insert and Delete Spartan funtionalities
 
   @edit
   Scenario: Select one Spartan wrt ID, edit and verify in the Database(DB)
-    When user click on to edit the spartan the spartan with ID: 101
-    Then the information of the spartan with ID: 101 should be same with database
+    When user click on to edit the spartan the spartan with ID: 258
+    Then the information of the spartan with ID: 258 should be same with database
 
   @del
   Scenario: Delete one Spartan randomly, and verify in the Database(DB)
@@ -49,8 +49,8 @@ Feature:Add,Insert and Delete Spartan funtionalities
       | 50  |
    @del @deln
   Scenario: Select many Spartan wrt ID, delete and verify NOT in the Database(DB)
-    When user click on to delete the spartan the spartan with ID from 220 to 250
-    Then the information of the deleted spartans with ID from 220 to 250 should not be in  database
+    When user click on to delete the spartan the spartan with ID from 301 to 407
+    Then the information of the deleted spartans with ID from 301 to 407 should not be in  database
 
   @num
   Scenario:    Verify the total number at UI and DB are equal(DB)
