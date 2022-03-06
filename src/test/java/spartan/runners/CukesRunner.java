@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "spartan/step_definitions",
         dryRun = false,
-        tags = "@wip"
+        tags = "@d"
 )
 public class CukesRunner {
 }

@@ -6,6 +6,7 @@ import io.cucumber.java.Scenario;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import spartan.utilities.BrowserUtils;
 import spartan.utilities.ConfigurationReader;
 import spartan.utilities.DBUtils;
 import spartan.utilities.Driver;

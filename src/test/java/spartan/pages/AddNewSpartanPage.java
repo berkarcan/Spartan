@@ -25,6 +25,9 @@ public class AddNewSpartanPage extends BasePage{
     @FindBy(linkText = "Back to the List")
     public WebElement backButton;
 
+    @FindBy(id="total")
+    public WebElement totalButton;
+
 
 
     public Map<String,String> fillForm(){
