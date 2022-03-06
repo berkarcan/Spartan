@@ -6,11 +6,11 @@
 #### The github version does not contain configuration.properties file as as the database is private. 
 #### If you have have the clone of the database in a machine. You need to create configuration.properties file under project folder with the following information.
 
-##### browser=
-##### url=
-##### dbUrl=
-##### dbUsername=
-##### dbPassword=
+###### browser=
+###### url=
+###### dbUrl=
+###### dbUsername=
+###### dbPassword=
 #### Cucumber Report:
 
 ![image](https://user-images.githubusercontent.com/61150565/156927928-da62ca36-d980-4769-b7c8-3ab8f16629af.png)
