@@ -49,8 +49,8 @@ Feature:Add,Insert and Delete Spartan funtionalities
       | 126  |
    @del @deln
   Scenario: Select many Spartan wrt ID, delete and verify NOT in the Database(DB)
-    When user click on to delete the spartan the spartan with ID from 101 to 135
-    Then the information of the deleted spartans with ID from 101 to 135 should not be in  database
+    When user click on to delete the spartan the spartan with ID from 113 to 135
+    Then the information of the deleted spartans with ID from 113 to 135 should not be in  database
 
   @num
   Scenario:    Verify the total number at UI and DB are equal(DB)
