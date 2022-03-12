@@ -196,7 +196,6 @@ public class changeSpartanStepdef {
         }
     }
 
-
     @When("user click on to delete the spartan the spartan with ID from {int} to {int}")
     public void userClickOnToDeleteTheSpartanTheSpartanWithIDFromTo(int id1, int idlast) {
         BrowserUtils.waitFor(0.5);
