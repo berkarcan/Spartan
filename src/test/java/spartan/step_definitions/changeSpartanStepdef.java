@@ -35,7 +35,7 @@ public class changeSpartanStepdef {
 
     @Then("user lands on All Spartan homepage")
     public void userLandsOnAllSpartanHomepage() {
-        String expectedUrl = "http://100.27.31.247:8000/spartans";
+        String expectedUrl = "http://3.82.244.112:8000/spartans";
         Assert.assertEquals("Url is different", expectedUrl, Driver.get().getCurrentUrl());
     }
 
