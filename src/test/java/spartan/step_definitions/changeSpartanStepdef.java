@@ -150,7 +150,7 @@ public class changeSpartanStepdef {
     @When("user click on to delete one of the spartan")
     public void userClickOnToDeleteOneOfTheSpartan() {
         BrowserUtils.waitFor(0.5);
-        String query = "select spartan_id,name,gender,phone from spartans";
+        String query = "select spartan_id,name,gender,phone from spartans where spartan_id>100";
         List<Map<String, Object>> queryResultMap = DBUtils.getQueryResultMap(query);
         expectedRowMap = queryResultMap.get(new Random().nextInt(queryResultMap.size()));
         System.out.println(expectedRowMap.toString());
