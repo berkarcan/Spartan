@@ -11,6 +11,7 @@ import spartan.pages.AllSpartanPage;
 import spartan.pages.EditSpartanPage;
 import spartan.pages.HomePage;
 import spartan.utilities.BrowserUtils;
+import spartan.utilities.ConfigurationReader;
 import spartan.utilities.DBUtils;
 import spartan.utilities.Driver;
 import java.math.*;
@@ -35,7 +36,7 @@ public class changeSpartanStepdef {
 
     @Then("user lands on All Spartan homepage")
     public void userLandsOnAllSpartanHomepage() {
-        String expectedUrl = "http://3.82.244.112:8000/spartans";
+        String expectedUrl = ConfigurationReader.get("url") +"/spartans";
         Assert.assertEquals("Url is different", expectedUrl, Driver.get().getCurrentUrl());
     }
 
